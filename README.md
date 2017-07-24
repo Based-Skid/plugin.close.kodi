@@ -11,9 +11,13 @@ Also Contains Code From a Freaktab Dev I dont Remember who but IF they want to c
 CloseFix bundled into old method) The Code Was included more for historical purposes, this was in my original version of this that was never released 
 
 #Features:
+
 Force Close Kodi (Near Flawless Method)
+
 Instant Kill (Using Flawless method)
+
 Old Method From Classic Wizards (for pussies)
+
 Instant kill (using old method)
 
 
