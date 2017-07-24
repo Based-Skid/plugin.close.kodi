@@ -1,14 +1,20 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.close.kodi" name="[COLOR red]Close [/COLOR] " version="3.0.0" provider-name="Based_Skid">
+<addons>
+<addon id="plugin.close.kodi" name="[COLOR red]Force Close Kodi[/COLOR] " version="3.0.1" provider-name="Based_Skid">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>executable</provides>
   </extension>
+    	<extension point="xbmc.addon.repository" name="Force Close Kodi Add-on Repository">
+		<info compressed="false">https://raw.githubusercontent.com/Based-Skid/plugin.close.kodi/master/repo/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/Based-Skid/plugin.close.kodi/master/repo/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/Based-Skid/plugin.close.kodi/master/repo/zips/</datadir>
+	</extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Force Close Kodi</summary>
     <description lang="en"></description>
     <platform>all</platform>
   </extension>
 </addon>
+</addons>
