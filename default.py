@@ -201,10 +201,10 @@ def omfci():
     xbmc.executebuiltin('ActivateWindow(ShutdownMenu)')
     #
 def INDEX():
-	addDir('Close System [COLOR green] Reccomended {/COLOR]',BASE,10,ART+'force.png',FANART,'')
-	addDir('Instant Kill [COLOR red]Warning Kills The MediaCenter Instantly){/COLOR]',BASE,4,ART+'force.png',FANART,'')
+	addDir('Close System--Recommended--',BASE,10,ART+'force.png',FANART,'')
+	addDir('Instant Kill --Warning-- Kills The MediaCenter Instantly{/COLOR]',BASE,4,ART+'force.png',FANART,'')
 	addDir('Old Method (For Pussies)',BASE,736641,ART+'force.png',FANART,'')
-	addDir('Instant Kill Old Method, Warning Kills The MediaCenter Instantly',BASE,736642,ART+'force.png',FANART,'')
+	addDir('Instant Kill Old Method, --Warning-- Kills The MediaCenter Instantly',BASE,736642,ART+'force.png',FANART,'')
 def get_params():
         param=[]
         paramstring=sys.argv[2]
