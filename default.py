@@ -33,7 +33,7 @@ def platform():
 ####KILL XBMC Flawless Force Close#
 ###################################
 #
-def killxbmc(over=None):
+def flawless(over=None):
 	if over: choice = 1
 	else: choice = DIALOG.yesno('Close System', '[COLOR %s]You are about to close The Media Center' % COLOR2, 'Would you like to continue?[/COLOR]', nolabel='[B][COLOR red] No Cancel[/COLOR][/B]',yeslabel='[B][COLOR green]Yes Close[/COLOR][/B]')
 	if choice == 1:
@@ -58,8 +58,6 @@ def oldmeth():
     # Windows and Pulsar and Quasar
     #################################
     if xbmc.getCondVisibility('system.platform.android'):
-        try: killxbmc()
-        except: pass
         try: os.system('kill $(ps | busybox grep org.xbmc.kodi | busybox awk "{ print $2 }")')
         except: pass
         try: os.system('kill $(ps | busybox grep com.sempermax.spmc16 | busybox awk "{ print $2 }")')
@@ -132,8 +130,6 @@ def omfci():
     # Windows and Pulsar and Quasar
     #################################
     if xbmc.getCondVisibility('system.platform.android'):
-        try: killxbmc()
-        except: pass
         try: os.system('kill $(ps | busybox grep org.xbmc.kodi | busybox awk "{ print $2 }")')
         except: pass
         try: os.system('kill $(ps | busybox grep com.sempermax.spmc16 | busybox awk "{ print $2 }")')
@@ -201,10 +197,10 @@ def omfci():
     xbmc.executebuiltin('ActivateWindow(ShutdownMenu)')
     #
 def INDEX():
-	addDir('Close System--Recommended--',BASE,10,ART+'force.png',FANART,'')
-	addDir('Instant Kill --Warning-- Kills The MediaCenter Instantly{/COLOR]',BASE,4,ART+'force.png',FANART,'')
+	addDir('Close System (Recommended)',BASE,10,ART+'force.png',FANART,'')
+	addDir('Insta Kill   (Double Points)    Warning Kills The MediaCenter Instantly',BASE,4,ART+'force.png',FANART,'')
 	addDir('Old Method (For Pussies)',BASE,736641,ART+'force.png',FANART,'')
-	addDir('Instant Kill Old Method, --Warning-- Kills The MediaCenter Instantly',BASE,736642,ART+'force.png',FANART,'')
+	addDir('Insta Kill Using The Old Method, Warning Kills The MediaCenter Instantly',BASE,736642,ART+'force.png',FANART,'')
 def get_params():
         param=[]
         paramstring=sys.argv[2]
