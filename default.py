@@ -16,17 +16,6 @@ COLOR1         = 'red'
 COLOR2         = 'white'
 log            = xbmc.translatePath('special://logpath/')
 
-## Detect Platform - Unused -##
-def platform():
-	if xbmc.getCondVisibility('system.platform.android'):             return 'android'
-	elif xbmc.getCondVisibility('system.platform.linux'):             return 'linux'
-	elif xbmc.getCondVisibility('system.platform.linux.Raspberrypi'): return 'linux'
-	elif xbmc.getCondVisibility('system.platform.windows'):           return 'windows'
-	elif xbmc.getCondVisibility('system.platform.osx'):               return 'osx'
-	elif xbmc.getCondVisibility('system.platform.atv2'):              return 'atv2'
-	elif xbmc.getCondVisibility('system.platform.ios'):               return 'ios'
-	elif xbmc.getCondVisibility('system.platform.darwin'):            return 'ios'
-
 
 
 ###################################
@@ -220,15 +209,7 @@ def get_params():
         return param
 		
         
-def platform():
-	if xbmc.getCondVisibility('system.platform.android'):             return 'android'
-	elif xbmc.getCondVisibility('system.platform.linux'):             return 'linux'
-	elif xbmc.getCondVisibility('system.platform.linux.Raspberrypi'): return 'linux'
-	elif xbmc.getCondVisibility('system.platform.windows'):           return 'windows'
-	elif xbmc.getCondVisibility('system.platform.osx'):               return 'osx'
-	elif xbmc.getCondVisibility('system.platform.atv2'):              return 'atv2'
-	elif xbmc.getCondVisibility('system.platform.ios'):               return 'ios'
-	elif xbmc.getCondVisibility('system.platform.darwin'):            return 'ios'
+
     
 
 def addDir(name,url,mode,iconimage,fanart,description):
@@ -305,7 +286,7 @@ if mode==None or url==None or len(url)<1:
         INDEX()
 
 elif mode==10:
-        killxbmc()
+        flawless()
 
 elif mode==4:
         os._exit(1)
