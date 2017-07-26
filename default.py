@@ -22,7 +22,7 @@ log            = xbmc.translatePath('special://logpath/')
 ####KILL XBMC Flawless Force Close#
 ###################################
 #
-def flawless(over=None):
+def flawless(over=xbmc.executebuiltin('ActivateWindow(home)')):
 	if over: choice = 1
 	else: choice = DIALOG.yesno('Close System', '[COLOR %s]You are about to close The Media Center' % COLOR2, 'Would you like to continue?[/COLOR]', nolabel='[B][COLOR red] No Cancel[/COLOR][/B]',yeslabel='[B][COLOR green]Yes Close[/COLOR][/B]')
 	if choice == 1:
