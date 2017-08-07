@@ -22,11 +22,12 @@ log            = xbmc.translatePath('special://logpath/')
 ####KILL XBMC Flawless Force Close#
 ###################################
 #
-def flawless(over=xbmc.executebuiltin('ActivateWindow(home)')):
-	if over: choice = 1
-	else: choice = DIALOG.yesno('Close System', '[COLOR %s]You are about to close The Media Center' % COLOR2, 'Would you like to continue?[/COLOR]', nolabel='[B][COLOR red] No Cancel[/COLOR][/B]',yeslabel='[B][COLOR green]Yes Close[/COLOR][/B]')
+def flawless():
+	choice = DIALOG.yesno('Close System', '[COLOR %s]You are about to close The Media Center' % COLOR2, 'Would you like to continue?[/COLOR]', nolabel='[B][COLOR red] No Cancel[/COLOR][/B]',yeslabel='[B][COLOR green]Yes Close[/COLOR][/B]')
 	if choice == 1:
 		os._exit(1)
+	else:
+		xbmc.executebuiltin("Action(Close)")
 #############################
 
 #############################
@@ -37,15 +38,11 @@ def oldmeth():
     choice = 1
     choice = DIALOG.yesno('Close System', '[COLOR %s]You are about to close The Entertainment Center' % COLOR2, 'Would you like to continue?[/COLOR]', nolabel='[B][COLOR red] No Cancel[/COLOR][/B]',yeslabel='[B][COLOR green]Yes Close[/COLOR][/B]')
     if choice == 0:
-        xbmc.executebuiltin('ActivateWindow(home)')
+        xbmc.executebuiltin("Action(Close)")
         return
     elif choice == 1:
         pass
     log_path = xbmc.translatePath('special://logpath')
-    #
-    #################################
-    # Windows and Pulsar and Quasar
-    #################################
     if xbmc.getCondVisibility('system.platform.android'):
         try: os.system('kill $(ps | busybox grep org.xbmc.kodi | busybox awk "{ print $2 }")')
         except: pass
@@ -112,12 +109,8 @@ def oldmeth():
     #dialog.ok("WARNING", "Force Close was unsuccessful.","Closing Kodi normally...",'')
     #xbmc.executebuiltin('Quit')
     xbmc.executebuiltin('ActivateWindow(ShutdownMenu)')
-    #
+
 def omfci():
-    #
-    #################################
-    # Windows and Pulsar and Quasar
-    #################################
     if xbmc.getCondVisibility('system.platform.android'):
         try: os.system('kill $(ps | busybox grep org.xbmc.kodi | busybox awk "{ print $2 }")')
         except: pass
@@ -187,8 +180,8 @@ def omfci():
     #
 def INDEX():
 	addDir('Close System (Recommended)',BASE,10,ART+'force.png',FANART,'')
-	addDir('Insta Kill   (Double Points)    Warning Kills The MediaCenter Instantly',BASE,4,ART+'force.png',FANART,'')
-	addDir('Old Method (For Pussies)',BASE,736641,ART+'force.png',FANART,'')
+	addDir('Insta Kill (Warning Kills The MediaCenter Instantly)',BASE,4,ART+'force.png',FANART,'')
+	addDir('Old Method',BASE,736641,ART+'force.png',FANART,'')
 	addDir('Insta Kill Using The Old Method, Warning Kills The MediaCenter Instantly',BASE,736642,ART+'force.png',FANART,'')
 def get_params():
         param=[]
