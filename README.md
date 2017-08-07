@@ -13,7 +13,7 @@ Force Close Kodi (Near Flawless Method)
 
 Instant Kill (Using Flawless method)
 
-Old Method From Classic Wizards (for pussies)
+Old Method From Classic Wizards (With The Force Close method from a certain freaktab dev)
 
 Instant kill (using old method)
 
